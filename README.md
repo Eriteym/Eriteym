@@ -27,7 +27,7 @@
 ![Static Badge](https://img.shields.io/badge/build--gray?style=flat&logo=aerospike&label=AeroSpike)
 <p>
 <a href="https://github.com/Eriteym">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=Eriteym&show_icons=true&count_private=true&theme=radical"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Eriteym&layout=compact&langs_count=8&theme=radical"/>
+  <img height="160em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=Eriteym&show_icons=true&theme=radical&count_private=true"/>
+  <img height="160em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Eriteym&layout=compact&langs_count=8&theme=radical"/>
 </a>
 </p>

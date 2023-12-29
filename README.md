@@ -26,8 +26,10 @@
 ![Static Badge](https://img.shields.io/badge/build--blue?style=flat&logo=mysql&label=MySQL&)
 ![Static Badge](https://img.shields.io/badge/build--blue?style=flat&logo=aerospike&label=AeroSpike)
 <p>
-<a href="https://github.com/Eriteym">
-  <img height="160em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=Eriteym&show_icons=true&theme=radical&count_private=true"/>
-  <img height="160em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Eriteym&layout=compact&langs_count=8&theme=radical"/>
+<a href="https://github.com/Eriteym/github-readme-stats">
+  <img height="200em" src="https://github-readme-stats-eriteym.vercel.app/api?username=Eriteym&count_private=true&theme=radical&rank_icon=github" />
+</a>
+<a href="https://github.com/Eriteym/github-readme-stats"">
+  <img height="200em" src="https://github-readme-stats-eriteym.vercel.app/api/top-langs/?username=Eriteym&layout=compact&langs_count=8&theme=radical"/>
 </a>
 </p>

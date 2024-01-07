@@ -6,6 +6,8 @@ name: Manual workflow
 # or API.
 on:
   workflow_dispatch:
+  release:
+    types: [published]
   push:
     branches:
       - main

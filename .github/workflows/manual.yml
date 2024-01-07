@@ -10,7 +10,7 @@ on:
     branches:
       - main
     tags:
-        - v*
+      - '*'
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,7 +29,7 @@ jobs:
     needs: [job_a]
   # The type of runner that the job will run on
     runs-on: Eriteym-runners
-    if: github.event_name == 'workflow_dispatch' || github.event_name == 'release'
+    if: github.event_name == 'workflow_dispatch' || github.ref_type == 'tag'
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell

@@ -26,7 +26,7 @@ jobs:
 
     - name: lowercase DOCKER_IMAGE
       run: |
-        echo "DOCKER_IMAGE=${{github.repository@L}}" >> ${GITHUB_ENV}
+        echo "DOCKER_IMAGE=${{github.repository}@L}" >> ${GITHUB_ENV}
         echo $DOCKER_IMAGE
     # Runs a single command using the runners shell
     - name: Send greeting

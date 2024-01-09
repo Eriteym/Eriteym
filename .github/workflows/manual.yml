@@ -26,11 +26,11 @@ jobs:
 
     - name: lowercase DOCKER_IMAGE
       run: |
-        echo "DOCKER_IMAGE=${{github.repository}@L}" >> ${GITHUB_ENV}
+        echo "DOCKER_IMAGE=${{github.repository}}" >> ${GITHUB_ENV}
         echo $DOCKER_IMAGE
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ env.DOCKER_IMAGE }}"
+      run: echo "Hello ${DOCKER_IMAGE}"
 
   job_b:  
     needs: [job_a]

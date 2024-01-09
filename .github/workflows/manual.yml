@@ -18,12 +18,14 @@ jobs:
   job_a:
     # The type of runner that the job will run on
     runs-on: Eriteym-runners
-
+    env:
+      DOCKER_IMAGE: ${{github.repository,,}}:${{github.ref_name}}
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      run: echo "Hello ${{ env.DOCKER_IMAGE }}"
 
   job_b:  
     needs: [job_a]

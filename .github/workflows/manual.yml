@@ -16,19 +16,32 @@ jobs:
   job_a:
     # The type of runner that the job will run on
     runs-on: Eriteym-runners
+    environment: dev
+    
     env:
       DOCKER_IMAGE: ${{github.repository}}:${{github.ref_name}}
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
 
-    - name: lowercase DOCKER_IMAGE
-      run: |
-        echo "DOCKER_IMAGE=${{github.repository}}" >> ${GITHUB_ENV}
-        echo $DOCKER_IMAGE
+      - name: Create .env file
+        run: |
+          echo "Generating .env file"
+          echo "${{ vars.ENV_FILE_DEV }}" >> .deploy/.env_backend
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .deploy/.env_backend
+
+      - name: check .env_file
+        run: cat .deploy/.env_backend
+
+      - name: lowercase DOCKER_IMAGE
+        run: |
+          echo "DOCKER_IMAGE=${{github.repository}}" >> ${GITHUB_ENV}
+          echo $DOCKER_IMAGE
     # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${DOCKER_IMAGE}"
+      - name: Send greeting
+        run: echo "Hello ${DOCKER_IMAGE}"
 
   job_b:  
     needs: [job_a]
